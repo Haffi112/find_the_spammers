@@ -24,6 +24,7 @@ print "Did not receive likes sorted by activity:"
 
 following = [item.screen_name for item in api.GetFriends()]
 
+
 unpopular = [item for item in following if item not in users_with_likes]
 unpopular_weighted = []
 a = dt.datetime.now()
@@ -33,11 +34,13 @@ for user in unpopular:
     oldest = tweets[-1].created_at
     b = dt.datetime.strptime(tweets[-1].created_at,"%a %b %d %X +0000 %Y")
     delay = (a-b).total_seconds()
-    unpopular_weighted.extend([(delay,user)])
-    print user,": ", 10*864000/delay, "tweets per day."
+    unpopular_weighted.extend([(delay/len(tweets),user)])
+    print user,": ", len(tweets)*864000/delay, "tweets per day."
+
+
+print "Sorted below, --------------------------------------------"
 
 unpopular_weighted.sort()
-print unpopular_weighted
 for (weight,item) in unpopular_weighted:
-  print item,": Approx.", 10*864000/weight, "tweets per day."
+  print item,": Approx.", 864000/weight, "tweets per day."
 
