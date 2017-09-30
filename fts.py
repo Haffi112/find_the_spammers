@@ -3,10 +3,10 @@
 import datetime as dt
 from collections import Counter
 import twitter
-api = twitter.Api(consumer_key="ocmS4FANGXabcRBM5ib3YRFe7",
-                  consumer_secret="EzsP8zSqvPJqUn08MgTPQauC52b1wwmV1lme08bzT16r4ZwFNC",
-                  access_token_key="14073406-1xkIBNL8pTSq9Zs7ipA6EggaOWkc45LPkaMUCC29e",
-                  access_token_secret="HcrK5pxmLH9JhDFN8aUn5aWF49cT2Dm9SZeWxgKwEIvI7")
+api = twitter.Api(consumer_key="SEE README",
+                  consumer_secret="SEE README",
+                  access_token_key="SEE README",
+                  access_token_secret="SEE README")
 
 favs = api.GetFavorites(count=200)
 users_liked = [t.user.screen_name for t in favs]
