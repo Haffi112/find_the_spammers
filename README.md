@@ -1,7 +1,7 @@
 # find_the_spammers
 Sort the twitter users you follow and haven't liked by how active they are.
 
-As a somewhat regular twitter user I felt that a feature was missing to suggest which accounts to unfollow based on disinterest. There are several reasons in my opinion to follow an account but to me the most significant one for me is the signal to noise ratio.
+As a somewhat regular twitter user I felt that a feature was missing to suggest which accounts to unfollow based on disinterest. There are several reasons in my opinion to follow an account but for me the most significant one is the signal to noise ratio.
 
 # Setup
 To run the script you need the [python-twitter](https://python-twitter.readthedocs.io/en/latest/index.html) API. Furtheremore, you need to get an API key from Twitter (see instructions [here](https://python-twitter.readthedocs.io/en/latest/getting_started.html)). With that you are good to go.
