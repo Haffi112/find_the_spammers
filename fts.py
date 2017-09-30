@@ -34,9 +34,10 @@ for user in unpopular:
     b = dt.datetime.strptime(tweets[-1].created_at,"%a %b %d %X +0000 %Y")
     delay = (a-b).total_seconds()
     unpopular_weighted.extend([(delay,user)])
-    print user,": ", delay
+    print user,": ", 10*864000/delay, "tweets per day."
 
 unpopular_weighted.sort()
 print unpopular_weighted
 for (weight,item) in unpopular_weighted:
-  print item,": ", weight
+  print item,": Approx.", 10*864000/weight, "tweets per day."
+
